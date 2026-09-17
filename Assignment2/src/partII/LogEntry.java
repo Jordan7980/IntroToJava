@@ -18,19 +18,32 @@ public class LogEntry {
         this.date = new Date(Long.parseLong(Arr[0]));
     }
 
-    private void setSeverity(String severity){
-        this.severity = severity;
+    public void setSeverity(){
+        this.severity = Arr[1];
     }
 
-    private void setSource(String source){
-        this.source = source;
+    public void setSource(){
+        this.source = Arr[2];
     }
 
-    private void setMessage(String message){
-        this.message = message;
+    public void setMessage(){
+        this.message = Arr[3];
     }
 
     //Getters
+    public Date getDate(){
+        return date;
+    }
 
+    public String getSeverity() {
+        return severity;
+    }
 
+    public String getSource(){
+        return source;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }
