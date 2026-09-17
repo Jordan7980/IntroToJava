@@ -31,6 +31,12 @@ public class LogParse {
 			    "1768467647000|INFO|Auth|Password reset requested for user bob"
 			};
 
+		LogEntry[] entries = new LogEntry[lines.length];
+
+		for(int i = 0; i < lines.length; i++) {
+			LogEntry entry = new LogEntry(lines[i]);
+
+		}
 	}
 
 }

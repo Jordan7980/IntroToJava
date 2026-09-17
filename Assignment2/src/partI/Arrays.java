@@ -14,13 +14,13 @@ public class Arrays {
 	}
 	
 	public static double[][] rotate90(double[][] matrix) {
-		
 
-		for(int i = 0; i < matrix.length; ++i){
-			for(int j = 0; i < matrix[0].length; ++j){
-
-			}
-		}
+//		for(int rows = 0; rows < matrix.length; ++rows){
+//			for(int cols = 0; cols < matrix[rows].length; ++cols){
+//				double[][] temp = new double[cols][rows];
+//				temp[rows] = matrix[rows];
+//			}
+//		}
 
 		return null;
 	}
