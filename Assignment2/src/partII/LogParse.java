@@ -35,7 +35,16 @@ public class LogParse {
 
 		for(int i = 0; i < lines.length; i++) {
 			LogEntry entry = new LogEntry(lines[i]);
-
+			entry.setDate();
+			entry.setSeverity();
+			entry.setSource();
+			entry.setMessage();
+			entries[i] = entry;
+			System.out.println("DateTime: " + entries[i].getDate());
+			System.out.println("Severity: " + entries[i].getSeverity());
+			System.out.println("Source: " + entries[i].getSource());
+			System.out.println("Message: " + entries[i].getMessage());
+			System.out.println("------------------------------------------");
 		}
 	}
 

@@ -3,18 +3,18 @@ import java.util.Date;
 
 public class LogEntry {
 
-    private Date date;
-    private String severity;
-    private String source;
-    private String message;
-    private String[] Arr;
+    private Date date = null;
+    private String severity = "";
+    private String source = "";
+    private String message = "";
+    private String[] Arr = null;
 
     public LogEntry(String log) {
-        this.Arr = log.split("|");
+        this.Arr = log.split("\\|");
     }
 
     //Setters
-    private void setDate(){
+    public  void setDate(){
         this.date = new Date(Long.parseLong(Arr[0]));
     }
 

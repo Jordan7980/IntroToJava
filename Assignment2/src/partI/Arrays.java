@@ -14,15 +14,17 @@ public class Arrays {
 	}
 	
 	public static double[][] rotate90(double[][] matrix) {
+		int rows = matrix.length;
+		int cols = matrix[0].length;
+		double[][] rotated = new double[rows][cols];
 
-//		for(int rows = 0; rows < matrix.length; ++rows){
-//			for(int cols = 0; cols < matrix[rows].length; ++cols){
-//				double[][] temp = new double[cols][rows];
-//				temp[rows] = matrix[rows];
-//			}
-//		}
+		for(int r = 0; r < matrix.length; ++r){
+			for(int c = 0; c < matrix[0].length; ++c){
+				rotated[c][rows - 1 - r] = matrix[r][c];
+			}
+		}
 
-		return null;
+		return rotated;
 	}
 	
 	public static void main(String[] args) {
@@ -45,7 +47,13 @@ public class Arrays {
 		System.out.println(']');
 
 
-		System.out.println("rotated matrix is: ");
+		System.out.println("rotated matrix is:");
+		for(int i = 0; i < rotated.length; ++i){
+			for(int j = 0; j < rotated[0].length; ++j){
+				System.out.print(" " + rotated[i][j]);
+			}
+			System.out.println();
+		}
 		
 	}
 }
